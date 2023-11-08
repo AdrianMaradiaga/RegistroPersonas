@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RegistroPersonas.Views.PersonaPage"
+             Title="{Binding PageTitle}">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <ActivityIndicator IsVisible="{Binding LoadingIsVisible}"
+                               IsRunning="{Binding LoadingIsVisible}"
+                               Color="Blue"
+                               HeightRequest="30" />
+            <Label Text="Nombre"
+                   FontAttributes="Bold" />
+            <Entry Text="{Binding PersonaDto.Nombre}"
+                   Placeholder="Ingrese el nombre"
+                   Margin="0,0,0,10" />
+            <Label Text="Apellido"
+                   FontAttributes="Bold" />
+            <Entry Text="{Binding PersonaDto.Apellido}"
+                   Placeholder="Ingrese el apellido"
+                   Margin="0,0,0,10" />
+            <Label Text="Edad"
+                   FontAttributes="Bold" />
+            <Entry Text="{Binding PersonaDto.Edad}"
+                   Placeholder="Ingrese la edad"
+                   Keyboard="Numeric"
+                   Margin="0,0,0,10" />
+            <Label Text="Correo"
+                   FontAttributes="Bold" />
+            <Entry Text="{Binding PersonaDto.Correo}"
+                   Placeholder="Ingrese el correo"
+                   Margin="0,0,0,10" />
+            <Label Text="Dirección"
+                   FontAttributes="Bold" />
+            <Entry Text="{Binding PersonaDto.Direccion}"
+                   Placeholder="Ingrese la dirección"
+                   Margin="0,0,0,10" />
+            <Button Text="Guardar"
+                    Command="{Binding SaveCommand}"
+                    BackgroundColor="Green"
+                    TextColor="White" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
